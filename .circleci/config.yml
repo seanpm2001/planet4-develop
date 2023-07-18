@@ -81,6 +81,7 @@ jobs:
       - run:
           name: Install environment
           command: |
+              echo '{"planet4": {"repos": {"planet4-master-theme": "maintenance/update-browser-db", "planet4-plugin-gutenberg-blocks": "maintenance/update-browser-db"}}}' | tee -a .p4-env.override.json
               nvm use
               npm install
               npm run env:requirements
@@ -89,6 +90,7 @@ jobs:
           name: E2E tests
           command: |
               echo -e "\n# Planet4 local development environment\n127.0.0.1\twww.planet4.test" | sudo tee -a /etc/hosts;
+              export WP_BASE_URL="http://www.planet4.test"
               nvm use
               npm run env:e2e-install -- --with-deps
               npm run env:e2e
