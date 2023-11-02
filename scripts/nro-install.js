@@ -78,11 +78,11 @@ if (theme) {
   composer(`remove --no-update ${theme}`, config.paths.container.app)
 
   if (existsSync(`${themePath}/composer.json`)) {
-    composer('update', `${config.paths.container.themes}/${themeName}`)
+    composer('update -n', `${config.paths.container.themes}/${themeName}`)
   }
 }
 
-composer('update', config.paths.container.app)
+composer('update -n', config.paths.container.app)
 // installPluginsDependencies(config)
 if (themeName) {
   wp(`theme activate ${themeName}`)

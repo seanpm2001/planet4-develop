@@ -52,7 +52,7 @@ generateBaseComposerRequirements(config)
  * Install themes/plugins
  */
 console.log('Installing & activating plugins ...')
-composer('update', config.paths.container.app)
+composer('update -n', config.paths.container.app)
 installPluginsDependencies(config)
 
 /**

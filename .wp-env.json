@@ -1,12 +1,13 @@
 {
   "phpVersion": "7.4",
-  "core": "WordPress/WordPress#6.2",
+  "core": "WordPress/WordPress#6.3.2",
   "mappings": {
     "wp-content": "./planet4"
   },
   "config": {
     "WP_SITEURL": "http://www.planet4.test/",
-    "WP_HOME": "http://www.planet4.test/"
+    "WP_HOME": "http://www.planet4.test/",
+    "WP_APP_ENV": "local"
   },
   "env": {
     "development": {

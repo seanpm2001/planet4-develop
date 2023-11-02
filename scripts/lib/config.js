@@ -43,16 +43,18 @@ function getConfig (override) {
 }
 
 function getNroConfig (nroConfig) {
-  return nroConfig && nroConfig.name
-    ? {
-        repo: `planet4-${nroConfig.name}`,
-        dir: `planet4-${nroConfig.name}`,
-        db: `planet4_${nroConfig.name.replace('-', '_')}`,
-        dbBucket: `planet4-${nroConfig.name}-master-db-backup`,
-        imgBucket: `planet4-${nroConfig.name}-stateless`,
-        ...nroConfig
-      }
-    : null
+  if (!nroConfig || !nroConfig.name) {
+    return null
+  }
+
+  return {
+    repo: `planet4-${nroConfig.name}`,
+    dir: `planet4-${nroConfig.name}`,
+    db: `planet4_${nroConfig.name.replace('-', '_')}`,
+    dbBucket: `planet4-${nroConfig.name}-master-db-backup`,
+    imgBucket: `planet4-${nroConfig.name}-stateless`,
+    ...nroConfig
+  }
 }
 
 function isObject (item) {

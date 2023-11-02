@@ -32,7 +32,7 @@ if (theme) {
   composer(`remove --no-update ${theme}`, `/app/${config.paths.local.app}/`)
 }
 
-composer('update', `/app/${config.paths.local.app}/`)
+composer('update -n', `/app/${config.paths.local.app}/`)
 if (themeName) {
   wp(`theme activate ${themeName}`)
 }
