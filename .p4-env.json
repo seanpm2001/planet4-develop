@@ -10,7 +10,7 @@
       "planet4-plugin-gutenberg-blocks": "main"
     },
     "composer": {
-      "processTimeout": "600"
+      "processTimeout": "900"
     }
   }
 }
