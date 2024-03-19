@@ -5,9 +5,9 @@
       "images": "1-25"
     },
     "repos": {
-      "planet4-base": "main",
-      "planet4-master-theme": "main",
-      "planet4-plugin-gutenberg-blocks": "main"
+      "planet4-base": "update/timber-composer",
+      "planet4-master-theme": "update/timber-composer-7390",
+      "planet4-plugin-gutenberg-blocks": "update/timber-composer-7390"
     },
     "composer": {
       "processTimeout": "600"
